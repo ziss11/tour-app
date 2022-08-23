@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">dicoding_pemula</string>
+    <string name="detail">Detail</string>
+    <string name="list">List</string>
+    <string name="about">About</string>
+    <string name="name">Abdul Azis</string>
+    <string name="email">abdul.azizz1108@gmail.com</string>
+    <string name="splash_icon">splash_icon</string>
+    <string name="profile_image">profile_image</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="zero">0</string>
+    <string name="order_now">Order Now</string>
+    <string name="tour_name">Tour name</string>
+    <string name="tour_city">Tour city</string>
+</resources>

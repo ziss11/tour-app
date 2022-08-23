@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_tour_photo"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:contentDescription="@string/profile_image"
+            android:scaleType="fitXY"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_tour_name"
+            style="@style/TitleText"
+            android:text="@string/tour_name" />
+
+        <TextView
+            android:id="@+id/tv_tour_city"
+            style="@style/SubtitleText"
+            android:layout_marginTop="5dp"
+            android:text="@string/tour_city"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/tv_tour_detail"
+            style="@style/ContentText"
+            android:text="@string/detail" />
+
+    </LinearLayout>
+</ScrollView>
