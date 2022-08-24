@@ -36,7 +36,7 @@ class ListTourAdapter(private val listTour: ArrayList<Tour>): RecyclerView.Adapt
         holder.tvName.text = tour.name
         holder.tvDetail.text = tour.detail
         holder.itemView.setOnClickListener{
-            onItemCLickCallback.onItemClicked(listTour[holder.adapterPosition])
+            onItemCLickCallback.onItemClicked(listTour[position])
         }
     }
 

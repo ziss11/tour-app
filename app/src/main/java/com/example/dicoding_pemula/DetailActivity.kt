@@ -2,11 +2,8 @@ package com.example.dicoding_pemula
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.example.dicoding_pemula.TourObject.listTour
 
 class DetailActivity : AppCompatActivity() {
