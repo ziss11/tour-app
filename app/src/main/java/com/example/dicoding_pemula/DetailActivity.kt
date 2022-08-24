@@ -7,15 +7,18 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.example.dicoding_pemula.TourObject.listTour
 
 class DetailActivity : AppCompatActivity() {
     private val pageTitle = "Tour Detail"
 
+    private lateinit var tvTourName: TextView
+    private lateinit var tourImage: ImageView
+    private lateinit var tvDetail: TextView
+    private lateinit var tvCity: TextView
+
     companion object {
-        const val EXTRA_NAME = "extra_name"
-        const val EXTRA_IMAGE = "extra_image"
-        const val EXTRA_DETAIL = "extra_detail"
-        const val EXTRA_CITY = "extra_city"
+        const val EXTRA_ID = "extra_id"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,19 +26,17 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
         supportActionBar?.title = pageTitle
 
-        val tvTourName: TextView = findViewById(R.id.tv_tour_name)
-        val tourImage: ImageView = findViewById(R.id.img_tour_photo)
-        val tvDetail: TextView = findViewById(R.id.tv_tour_detail)
-        val tvCity: TextView = findViewById(R.id.tv_tour_city)
+        tvTourName = findViewById(R.id.tv_tour_name)
+        tourImage = findViewById(R.id.img_tour_photo)
+        tvDetail = findViewById(R.id.tv_tour_detail)
+        tvCity = findViewById(R.id.tv_tour_city)
 
-        val name = intent.getStringExtra(EXTRA_NAME)
-        val image = intent.getIntExtra(EXTRA_IMAGE, 0)
-        val detail = intent.getStringExtra(EXTRA_DETAIL)
-        val city = intent.getStringExtra(EXTRA_CITY)
+        val tourId = intent.getIntExtra(EXTRA_ID, 0)
+        val result = listTour.find { it.id == tourId }
 
-        tvTourName.text = name!!.trim()
-        tourImage.setImageResource(image)
-        tvDetail.text = detail!!.trim()
-        tvCity.text = city!!.trim()
+        tvTourName.text = result?.name?.trim()
+        tourImage.setImageResource(result?.photo ?: 0)
+        tvDetail.text = result?.detail?.trim()
+        tvCity.text = result?.city?.trim()
     }
 }

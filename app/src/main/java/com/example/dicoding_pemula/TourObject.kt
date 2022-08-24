@@ -14,7 +14,7 @@ object TourObject {
         "Pulau Komodo"
     )
 
-    private val tourCity = arrayOf(
+    private val tourCities = arrayOf(
         "Bangka Belitung",
         "Bali",
         "Lombok, NTB",
@@ -132,11 +132,13 @@ object TourObject {
         get() {
             val list = arrayListOf<Tour>()
             for (position in tourNames.indices) {
-                val tour = Tour()
-                tour.name = tourNames[position]
-                tour.city = tourCity[position]
-                tour.detail = tourDetails[position]
-                tour.photo = tourImages[position]
+                val tour = Tour(
+                    id = position + 1,
+                    name = tourNames[position],
+                    city = tourCities[position],
+                    detail = tourDetails[position],
+                    photo = tourImages[position],
+                )
                 list.add(tour)
             }
             return list

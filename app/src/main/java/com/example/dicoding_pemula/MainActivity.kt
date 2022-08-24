@@ -41,10 +41,7 @@ class MainActivity : AppCompatActivity() {
     private fun gotoDetailActivity(food: Tour) {
         val moveToDetailActivity = Intent(this@MainActivity, DetailActivity::class.java)
 
-        moveToDetailActivity.putExtra(DetailActivity.EXTRA_NAME, food.name)
-        moveToDetailActivity.putExtra(DetailActivity.EXTRA_DETAIL, food.detail)
-        moveToDetailActivity.putExtra(DetailActivity.EXTRA_IMAGE, food.photo)
-        moveToDetailActivity.putExtra(DetailActivity.EXTRA_CITY, food.city)
+        moveToDetailActivity.putExtra(DetailActivity.EXTRA_ID, food.id)
         this.startActivity(moveToDetailActivity)
     }
 
